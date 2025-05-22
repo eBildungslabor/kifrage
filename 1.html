@@ -11,6 +11,15 @@
         display: none;
       }
     </style>
+
+     <script>
+      function copyPrompt() {
+        const prompt = document.getElementById('prompt-text').textContent;
+        navigator.clipboard.writeText(prompt)
+          .then(() => alert('Prompt wurde kopiert!'))
+          .catch(() => alert('Kopieren fehlgeschlagen.'));
+      }
+    </script>
  
   </head>
   <body>
